@@ -5,7 +5,7 @@ import Alert from './Component/Alert';
 import TextForm from './Component/Textform';
 import About from './Component/About';
 import React,{useState} from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
  
 
 function App() {
@@ -37,25 +37,25 @@ const toggleMode=()=>{
 }
  return(
   <>
- <Router>
+ {/* <Router> */}
 
    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/> 
    <Alert alert={alert}/>
   <div className="container my-3">
-  <Switch>
+  {/* <Switch>
           <Route exact path="/about">
             <About/>
           </Route>
           <Route exact path="/">
           <TextForm showAlert={showAlert} heading="Enter text to analyse" mode={mode}/>
           </Route>
-        </Switch>
+        </Switch> */}
       
 
   {/* <About/> */}
-  {/* <TextForm showAlert={showAlert} heading="Enter text to analyse" mode={mode}/> */}
+  <TextForm showAlert={showAlert} heading="Enter text to analyse" mode={mode}/>
   </div>
-  </Router>
+  {/* </Router> */}
 </>
   );
 }
